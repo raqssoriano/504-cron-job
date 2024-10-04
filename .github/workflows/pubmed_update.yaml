@@ -16,7 +16,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.10'
           cache: 'pip'
 
       - name: Install dependencies
@@ -24,7 +24,7 @@ jobs:
 
       - name: Run PubMed Retrieval Script
         env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: python /Users/raqsmacbookair/python/504-cron-job/pubmed_github_action.py # run data pipeline
+          RESEND_API_KEY: ${{ RESEND_API_KEY }}
+        run: python 504-cron-job/pubmed_github_action.py # run data pipeline
 
      

@@ -74,7 +74,7 @@ print(df_pubmed)
 # Send the DataFrame as an email
 params: resend.Emails.SendParams = {
     "from": "PubMed API <testing@resend.dev>",
-    "to": ["mrrsoriano@gmail.com"],
+    "to": ["mrrsoriano@yahoo.com"],
     "subject": "PubMed API - Digital Health Articles",
     "html": df_pubmed.to_html(index=False)
 }
