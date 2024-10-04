@@ -1,14 +1,22 @@
+
 import requests
-import pandas as pd
 import os
 import resend
+import pandas as pd
+
+
 from dotenv import load_dotenv
+
 
 load_dotenv()
 
 ## Resend: https://resend.com/docs/send-with-python 
 ### Purpose of resend is to trigger a email that contains the new data...
-resend.api_key = os.getenv("RESEND_API_KEY")
+
+
+resend.api_key = os.getenv('RESEND_API_KEY')
+
+
 
 # Function to search for articles using a specific MeSH term
 def search_pubmed(term, retmax=10):
@@ -72,12 +80,25 @@ df_pubmed = pubmed_to_dataframe(mesh_term, retmax=10)
 print(df_pubmed)
 
 # Send the DataFrame as an email
-params: resend.Emails.SendParams = {
+params = resend.Emails.SendParams ={
     "from": "PubMed API <testing@resend.dev>",
-    "to": ["mrrsoriano@yahoo.com"],
+   "to": ["mrrsoriano@yahoo.com"],
     "subject": "PubMed API - Digital Health Articles",
     "html": df_pubmed.to_html(index=False)
 }
+
+# try:
+#    response = resend.emails.send(
+#       from_='PubMed API <testing@resend.dev>',
+#       to='mrrsoriano@yahoo.com',
+#        subject='PubMed API - Digital Health Articles',
+#        content='Hello, this is a test email from Resend!.'
+#    )
+#    print("EMAIL sent successfully!", response)
+# except Exception as e:
+#    print("An error occurred:", e)
+
+
 
 # Send the email
 email = resend.Emails.send(params)
