@@ -25,7 +25,7 @@ jobs:
       - name: Run PubMed Retrieval Script
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: python3 ~python/504-cron-job/pubmed_github_action.py
+        run: python pubmed_github_action.py
         # run data pipeline
 
      
