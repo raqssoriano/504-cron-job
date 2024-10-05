@@ -80,26 +80,23 @@ df_pubmed = pubmed_to_dataframe(mesh_term, retmax=10)
 print(df_pubmed)
 
 # Send the DataFrame as an email
-params = resend.Emails.SendParams ={
+params = {
     "from": "PubMed API <testing@resend.dev>",
-   "to": ["mrrsoriano@yahoo.com"],
+   "to": ["mrrsoriano@gmail.com"],
     "subject": "PubMed API - Digital Health Articles",
     "html": df_pubmed.to_html(index=False)
 }
 
-# try:
-#    response = resend.emails.send(
-#       from_='PubMed API <testing@resend.dev>',
-#       to='mrrsoriano@yahoo.com',
-#        subject='PubMed API - Digital Health Articles',
-#        content='Hello, this is a test email from Resend!.'
-#    )
-#    print("EMAIL sent successfully!", response)
-# except Exception as e:
-#    print("An error occurred:", e)
-
+try:
+    response = resend.emails.send(params)
+    print("Email sent successfully!", response)
+except Exception as e:
+    print("Error sending email:", e)
 
 
 # Send the email
-email = resend.Emails.send(params)
-print(email)
+# email = esend.Emails.send(params)
+#print(email)
+
+# email = resend.emails.send(params)
+# print(email)
