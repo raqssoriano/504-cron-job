@@ -1,16 +1,10 @@
-name: TEST
+name: update
 
 on:
   # schedule:
-<<<<<<< HEAD
-    - cron: "* * * * *"
-  # run every min
-  # workflow_dispatch:  # manual triggers
-=======
     - cron: "* * * * *""
   # run every 1 min
 
->>>>>>> e4cd46e (update)
 
 jobs:
   # run-data-pipeline:
