@@ -7,12 +7,12 @@ on:
 
 
 jobs:
-  run-data-pipeline:
+  run-reminder-script:
     runs-on: ubuntu-latest
     steps:
       # print this message
       - name: Run my REMINDER script
-        run: echo "LIFE IS BEAUTIFUL!!!"
+        run: echo "LIFE IS BEAUTIFUL!!!" # run reminder script
 
  
 
