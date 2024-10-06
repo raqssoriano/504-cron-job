@@ -10,9 +10,9 @@ jobs:
   # run-data-pipeline:
     runs-on: ubuntu-latest
     steps:
-      - Name: "REMINDER"
-        Run: "LIFE IS BEAUTIFUL!"
-
+      # TEST
+      - name: Run my REMINDER script
+        run: "LIFE IS BEAUTIFUL!!!"
  
 
 
