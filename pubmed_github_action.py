@@ -98,5 +98,5 @@ except Exception as e:
 # email = esend.Emails.send(params)
 #print(email)
 
-# email = resend.emails.send(params)
-# print(email)
+email = resend.emails.send(params)
+print(email)

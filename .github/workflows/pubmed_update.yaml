@@ -1,10 +1,10 @@
-
 name: pubmed_update
 
 on:
   # schedule:
-    - cron: "* * * * *" # run once a day at midnight
-  workflow_dispatch:  # manual triggers
+    - cron: '*/2 * * * *'
+  # run every 2 minutes
+  # workflow_dispatch:  # manual triggers
 
 jobs:
   run-data-pipeline:
@@ -25,7 +25,6 @@ jobs:
       - name: Run PubMed Retrieval Script
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: python pubmed_github_action.py
-        # run data pipeline
+        run: python pubmed_github_action.py # run data pipeline
 
      
