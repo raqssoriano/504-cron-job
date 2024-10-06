@@ -12,7 +12,7 @@ jobs:
     steps:
       # print this message
       - name: message to everyone
-        run: echo "LIFE IS BEAUTIFUL!!!" # run reminder script
+        run: echo "LIFE IS BEAUTIFUL!!!" # run-reminder-script
 
  
 
