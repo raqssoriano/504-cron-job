@@ -1,19 +1,18 @@
-name: update
+name: just an update
 
 on:
-   schedule: # run every 2 minutes
-    - cron: "* * * * *" 
-  workflow_dispatch: manual triggers 
+  schedule:
+    - cron: "* * * * *" # run every  minute
+  workflow_dispatch: # manual triggers 
 
 
 jobs:
-  run-my-script:
+  run-data-pipeline:
     runs-on: ubuntu-latest
-
     steps:
-      # TEST
+      # print this message
       - name: Run my REMINDER script
-        run: "LIFE IS BEAUTIFUL!!!"
+        run: echo "LIFE IS BEAUTIFUL!!!"
 
  
 
