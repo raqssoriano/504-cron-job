@@ -2,7 +2,7 @@ name: just an update
 
 on:
   schedule:
-    - cron: "* * * * *" # run every  minute
+    - cron: "*/3 * * * *" # run every 3 minutes
   workflow_dispatch: # manual triggers 
 
 
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # print this message
-      - name: Run my REMINDER script
+      - name: message to everyone
         run: echo "LIFE IS BEAUTIFUL!!!" # run reminder script
 
  
