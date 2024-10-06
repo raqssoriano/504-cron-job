@@ -1,9 +1,8 @@
 name: update
 
 on:
-  # schedule:
-    - cron: "* * * * *""
-  # run every 1 min
+   schedule: # run every 2 minutes
+    - cron: "*/2 * * * *" 
 
 
 jobs:
