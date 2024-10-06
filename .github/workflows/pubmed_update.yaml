@@ -2,7 +2,8 @@ name: update
 
 on:
    schedule: # run every 2 minutes
-    - cron: "*/2 * * * *" 
+    - cron: "* * * * *" 
+  workflow_dispatch: manual triggers 
 
 
 jobs:
