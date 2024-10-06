@@ -6,12 +6,20 @@ on:
 
 
 jobs:
-  # run-data-pipeline:
+  run-my-script:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
       # TEST
       - name: Run my REMINDER script
         run: "LIFE IS BEAUTIFUL!!!"
+
  
 
 
