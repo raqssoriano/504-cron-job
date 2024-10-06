@@ -2,8 +2,8 @@ name: pubmed_update
 
 on:
   # schedule:
-    - cron: '*/2 * * * *'
-  # run every 2 minutes
+    - cron: "* * * * *"
+  # run every min
   # workflow_dispatch:  # manual triggers
 
 jobs:
