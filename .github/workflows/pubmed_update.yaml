@@ -2,7 +2,7 @@ name: just an update
 
 on:
   schedule:
-    - cron: "*/3 * * * *" # run every 3 minutes
+    - cron: "0 9 * * *" # run every morning at 9am
   workflow_dispatch: # manual triggers 
 
 
